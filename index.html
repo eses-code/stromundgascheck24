@@ -55,8 +55,7 @@
     }
   </script>
 </head>
-<body>
-<header>
+<body<header>
   <img src="logo.png" alt="eses24 Logo" />
   <h1>Willkommen bei eses24</h1>
   <p>Ihr Vergleichsportal für Strom & Gas in Deutschland</p>
@@ -86,5 +85,43 @@
 
   <section id="kontakt">
     <h2>Jetzt persönliche Beratung erhalten</h2>
-    <form action="https://formspree.io/f/your-form-id
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="Name" placeholder="Ihr Name" required />
+      <input type="email" name="Email" placeholder="Ihre E-Mail" required />
+      <input type="text" name="PLZ" placeholder="Postleitzahl" required />
+      <textarea name="Nachricht" placeholder="Ihre Nachricht" required></textarea>
+      <button type="submit">Absenden</button>
+    </form>
+  </section>
 
+  <section id="agb">
+    <h2>AGB</h2>
+    <p>Unsere Dienstleistung ist für Endkunden kostenlos...</p>
+  </section>
+
+  <section id="datenschutz">
+    <h2>Datenschutz</h2>
+    <p>Ihre Daten werden DSGVO-konform behandelt...</p>
+  </section>
+
+  <section id="impressum">
+    <h2>Impressum</h2>
+    <p>eses24 – Erdem Özkaya, Alleestr. 72, 58097 Hagen</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 eses24 – Strom- und Gasvergleich</p>
+  <div class="footer-links">
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
+    <a href="#agb">AGB</a>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  Diese Website verwendet Cookies.
+  <button onclick="acceptCookies()">Verstanden</button>
+</div>
+>
+<!-- rest of body remains unchanged -->
