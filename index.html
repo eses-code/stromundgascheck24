@@ -1,84 +1,23 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Strom & Gas Check 24 - eses24</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background-color: #22cc71;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    .container {
-      padding: 30px;
-      text-align: center;
-    }
-    .cta-button {
-      background-color: #ff8800;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1.2em;
-      cursor: pointer;
-      margin-top: 20px;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .anbieter-logos {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-    .anbieter-logos img {
-      width: 120px;
-      margin: 10px;
-    }
-    footer {
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
+import zipfile
+import os
 
-  <header>
-    <h1>Willkommen bei Strom & Gas Check 24 - eses24</h1>
-    <p>Vergleichen & Sparen – Strom und Gas Anbieter wechseln war nie einfacher!</p>
-  </header>
+# Logo isimlerini tanımla
+logo_filenames = [
+    "eon.png", "vattenfall.png", "enbw.png", "lichtblick.png", "yello.png",
+    "mainova.png", "ewe.png", "naturstrom.png", "swm.png", "lekker.png",
+    "eprimo.png", "discovergy.png", "greenplanet.png", "123energie.png", "stadtwerke.png"
+]
 
-  <div class="container">
-    <p>Wir helfen Ihnen, den besten Anbieter für Strom und Gas in Ihrer Region zu finden.</p>
-    <a href="https://wa.me/491234567890" class="cta-button">Jetzt Angebot erhalten</a>
+# ZIP dosyası oluşturulacağı yol
+zip_path = "/mnt/data/logos_placeholder.zip"
 
-    <div class="anbieter-logos">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/E.ON_Logo_2019.svg" alt="E.ON">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Vattenfall_logo.svg" alt="Vattenfall">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/EnBW_Logo_2013.svg" alt="EnBW">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Logo_Lichtblick_2021.svg" alt="Lichtblick">
-      <!-- Diğer Anbieter logoları buraya eklenebilir -->
-    </div>
-  </div>
+# ZIP dosyasını oluştur (şu anda sadece boş yer tutucularla)
+with zipfile.ZipFile(zip_path, 'w') as zipf:
+    for filename in logo_filenames:
+        placeholder_path = f"/mnt/data/{filename}"
+        with open(placeholder_path, "wb") as f:
+            f.write(b"")  # Boş dosya (yer tutucu)
+        zipf.write(placeholder_path, arcname=filename)
+        os.remove(placeholder_path)  # Geçici dosyayı sil
 
-  <footer>
-    © 2025 eses24 - Strom & Gas Beratung
-  </footer>
-
-</body>
-</html>
+zip_path
