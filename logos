@@ -1,1 +1,23 @@
+import zipfile
+import os
 
+# Logo isimlerini tanımla
+logo_filenames = [
+    "eon.png", "vattenfall.png", "enbw.png", "lichtblick.png", "yello.png",
+    "mainova.png", "ewe.png", "naturstrom.png", "swm.png", "lekker.png",
+    "eprimo.png", "discovergy.png", "greenplanet.png", "123energie.png", "stadtwerke.png"
+]
+
+# ZIP dosyası oluşturulacağı yol
+zip_path = "/mnt/data/logos_placeholder.zip"
+
+# ZIP dosyasını oluştur (şu anda sadece boş yer tutucularla)
+with zipfile.ZipFile(zip_path, 'w') as zipf:
+    for filename in logo_filenames:
+        placeholder_path = f"/mnt/data/{filename}"
+        with open(placeholder_path, "wb") as f:
+            f.write(b"")  # Boş dosya (yer tutucu)
+        zipf.write(placeholder_path, arcname=filename)
+        os.remove(placeholder_path)  # Geçici dosyayı sil
+
+zip_path
