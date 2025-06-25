@@ -3,34 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vergleichen Sie Strom- und Gastarife in Deutschland kostenlos – eses24 berät Sie persönlich.">
-  <meta name="keywords" content="Strom, Gas, Anbieterwechsel, Vergleich, Energie, eses24, Stromtarif, Gasanbieter, Hagen, Deutschland">
+  <meta name="description" content="Vergleichen Sie Strom- und Gastarife in Deutschland kostenlos – eses24 berät Sie persönlich und unabhängig. Jetzt Anbieter wechseln und sparen!">
+  <meta name="keywords" content="Stromvergleich, Gasvergleich, Stromtarife, Gasanbieter, Energie sparen, Anbieterwechsel, eses24, Vertragsberatung, Stromanbieter Hagen, Strompreise vergleichen">
   <meta name="author" content="eses24 - Erdem Özkaya">
   <title>Strom & Gas Vergleich - eses24</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f8f8f8; color: #222; }
-    header, footer { background: #2ecc71; color: white; padding: 20px; text-align: center; }
-    nav { background: #333; padding: 10px; text-align: center; flex-wrap: wrap; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Roboto', sans-serif; background: #f4f7f9; color: #222; line-height: 1.6; }
+    header, footer { background: #27ae60; color: white; padding: 30px 20px; text-align: center; }
+    header img { max-width: 180px; margin-bottom: 15px; }
+    nav { background: #1c1c1c; padding: 15px; text-align: center; }
+    nav a { color: white; margin: 0 15px; font-weight: 500; text-decoration: none; }
     nav a:hover { text-decoration: underline; }
-    main { max-width: 1000px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h1, h2 { color: #2ecc71; }
-    .anbieter-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .anbieter { width: 120px; text-align: center; }
-    .anbieter img { width: 100px; height: auto; object-fit: contain; background: white; padding: 5px; border: 1px solid #ddd; border-radius: 5px; }
+    main { max-width: 1100px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    h1, h2 { color: #27ae60; margin-top: 0; }
+    .anbieter-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 20px; padding: 20px 0; }
+    .anbieter { text-align: center; background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; transition: transform 0.2s ease; }
+    .anbieter:hover { transform: scale(1.05); box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+    .anbieter img { width: 100px; height: auto; margin-bottom: 10px; object-fit: contain; background: #fff; padding: 5px; border-radius: 5px; }
     form input, form textarea, form button {
-      width: 100%; padding: 10px; margin: 10px 0; border-radius: 4px; border: 1px solid #ccc; }
-    form button { background: #2ecc71; color: white; font-weight: bold; border: none; cursor: pointer; }
+      width: 100%; padding: 12px; margin: 12px 0; border-radius: 5px; border: 1px solid #ccc; font-size: 1em; }
+    form button { background: #27ae60; color: white; font-weight: bold; border: none; cursor: pointer; transition: background 0.3s ease; }
+    form button:hover { background: #219653; }
     .footer-links a { color: white; margin: 0 10px; font-size: 0.9em; text-decoration: underline; }
     .cookie-banner {
-      position: fixed; bottom: 0; width: 100%; background: #333; color: white; padding: 10px; text-align: center;
+      position: fixed; bottom: 0; width: 100%; background: #1c1c1c; color: white; padding: 15px; text-align: center; z-index: 1000;
     }
     .cookie-banner button {
-      background: #2ecc71; color: white; border: none; padding: 8px 15px; margin-left: 10px; cursor: pointer;
-    }
+      background: #27ae60; color: white; border: none; padding: 10px 20px; margin-left: 15px; cursor: pointer; }
     @media (max-width: 600px) {
-      .anbieter-grid { flex-direction: column; align-items: center; }
-      .anbieter { width: 80%; }
+      .anbieter-grid { grid-template-columns: 1fr 1fr; }
+      .anbieter img { width: 80px; }
     }
   </style>
   <script>
@@ -47,9 +51,9 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="eses24 Logo" style="max-width:150px; margin-bottom: 10px;"/>
-    <h1>Willkommen bei eses24</h1>
-    <p>Ihr Partner für Strom- & Gasvertragsberatung in Deutschland</p>
+    <img src="logo.png" alt="eses24 Logo" />
+    <h1>Strom & Gas einfach vergleichen und sparen</h1>
+    <p>Wir beraten Sie persönlich und unabhängig. Schnell. Sicher. Kostenlos.</p>
   </header>
   <nav>
     <a href="#anbieter">Anbieter</a>
@@ -59,10 +63,10 @@
     <a href="#widerruf">Widerruf</a>
     <a href="#impressum">Impressum</a>
   </nav>
-
   <main>
     <section id="anbieter">
-      <h2>Unsere Anbieter</h2>
+      <h2>Top Energieanbieter im Vergleich</h2>
+      <p>Diese Anbieter gehören zu den bekanntesten und zuverlässigsten auf dem deutschen Markt:</p>
       <div class="anbieter-grid">
         <div class="anbieter"><img src="logos/eon.png" alt="E.ON"><p>E.ON</p></div>
         <div class="anbieter"><img src="logos/vattenfall.png" alt="Vattenfall"><p>Vattenfall</p></div>
@@ -76,53 +80,47 @@
         <div class="anbieter"><img src="logos/lekker.png" alt="Lekker Energie"><p>Lekker Energie</p></div>
         <div class="anbieter"><img src="logos/eprimo.png" alt="Eprimo"><p>Eprimo</p></div>
         <div class="anbieter"><img src="logos/discovergy.png" alt="Discovergy"><p>Discovergy</p></div>
-        <div class="anbieter"><img src="logos/greenplanet.png" alt="Green Planet Energy"><p>Green Planet Energy</p></div>
+        <div class="anbieter"><img src="logos/greenplanet.png" alt="Green Planet Energy"><p>Green Planet</p></div>
         <div class="anbieter"><img src="logos/123energie.png" alt="123energie"><p>123energie</p></div>
         <div class="anbieter"><img src="logos/stadtwerke.png" alt="Stadtwerke Leipzig"><p>Stadtwerke Leipzig</p></div>
       </div>
     </section>
-
     <section id="kontakt">
-      <h2>Kontaktformular</h2>
+      <h2>Kostenlose Beratung anfragen</h2>
+      <p>Jetzt Tarif sichern! Unsere Experten finden den besten Strom- oder Gasvertrag für Sie – kostenlos & unverbindlich.</p>
       <form action="https://formspree.io/f/your-form-id" method="POST">
         <input type="text" name="Name" placeholder="Ihr Name" required />
         <input type="email" name="Email" placeholder="Ihre E-Mail" required />
         <input type="text" name="PLZ" placeholder="Postleitzahl" required />
         <textarea name="Nachricht" placeholder="Ihre Nachricht" required></textarea>
-        <button type="submit">Absenden</button>
+        <button type="submit">Jetzt vergleichen</button>
       </form>
     </section>
-
     <section id="agb">
-      <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
-      <p>Unsere Beratungsdienstleistungen sind für Endkunden kostenlos. Wir arbeiten ausschließlich mit seriösen Energieversorgern zusammen. Der Vertragsabschluss erfolgt direkt mit dem Energieanbieter.</p>
+      <h2>AGB – Allgemeine Geschäftsbedingungen</h2>
+      <p>Unsere Dienstleistungen sind für Sie kostenlos. Verträge werden direkt mit dem Energieversorger abgeschlossen. Wir garantieren eine transparente, faire und unabhängige Beratung.</p>
     </section>
-
     <section id="datenschutz">
       <h2>Datenschutzerklärung</h2>
-      <p>Ihre Daten werden gemäß der DSGVO streng vertraulich behandelt und nicht an Dritte weitergegeben. Durch das Absenden des Kontaktformulars erklären Sie sich mit der Speicherung und Verarbeitung Ihrer Daten einverstanden.</p>
+      <p>Ihre Daten werden DSGVO-konform gespeichert und ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Keine Weitergabe an Dritte ohne Ihre Zustimmung.</p>
     </section>
-
     <section id="widerruf">
       <h2>Widerrufsrecht</h2>
-      <p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses mit dem Energieanbieter.</p>
+      <p>Sie können einen mit einem Energieanbieter geschlossenen Vertrag innerhalb von 14 Tagen ohne Angabe von Gründen widerrufen.</p>
     </section>
-
     <section id="impressum">
       <h2>Impressum</h2>
-      <p>eses24<br>Inhaber: Erdem Özkaya<br>Alleestr. 72<br>58097 Hagen<br>Deutschland<br><br>Telefon: +49 XXX XXX XXXX<br>E-Mail: info@eses24.de<br>USt-IdNr: entfällt gemäß §19 UStG</p>
+      <p>eses24<br>Inhaber: Erdem Özkaya<br>Alleestr. 72<br>58097 Hagen<br>Deutschland<br>Telefon: +49 XXX XXX XXXX<br>E-Mail: info@eses24.de<br>USt-IdNr: entfällt gemäß §19 UStG</p>
     </section>
   </main>
-
   <footer>
-    <p>© 2025 eses24 - Strom & Gas Vergleichsportal</p>
+    <p>© 2025 eses24 - Strom & Gas Vergleichsportal mit persönlicher Beratung</p>
     <div class="footer-links">
       <a href="#impressum">Impressum</a>
       <a href="#datenschutz">Datenschutz</a>
       <a href="#agb">AGB</a>
     </div>
   </footer>
-
   <div id="cookie-banner" class="cookie-banner" style="display:none;">
     Diese Website verwendet Cookies, um Ihnen das beste Erlebnis zu bieten.
     <button onclick="acceptCookies()">Verstanden</button>
