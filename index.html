@@ -2,6 +2,50 @@
 <html lang="de">
 <head><!-- Google Tag Manager -->
 <script>/* GTM-Code hier */</script>
+<style>
+.anbieter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.anbieter {
+  text-align: center;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.anbieter:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.anbieter img {
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
+  background: white;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .anbieter-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .anbieter img {
+    width: 80px;
+    height: 50px;
+  }
+}
+
+</style>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
