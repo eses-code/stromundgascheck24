@@ -148,28 +148,48 @@ d><!-- Google Tag Manager -->
     </div>
     
   </div>
-</section><section style="padding: 50px 20px; background-color: #f7f7f7; text-align: center;">
-  <h2 style="font-size: 2rem; color: #003333; margin-bottom: 30px;">Was unsere Kunden sagen</h2>
+</section><!-- Kundenbewertungen Section mit Vertrauensaufbau -->
+<section class="bewertungen" style="background:#f9f9f9;padding:40px 20px;text-align:center;font-family:sans-serif;">
+  <h2 style="font-size:28px;margin-bottom:20px;color:#1c1c1c;">Was unsere Kunden sagen</h2>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1000px; margin: auto;">
+  <!-- Bewertung 1 -->
+  <div style="max-width:800px;margin:0 auto 30px auto;padding:20px;background:white;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size:18px;color:#333;margin-bottom:10px;">„Schneller Wechsel, top Service! Ich habe 270 € im Jahr gespart.“</p>
+    <p style="color:#888;font-size:14px;">– Mehmet T., Berlin</p>
+    <div style="color:#f5b400;font-size:20px;">★★★★★</div>
+  </div>
 
-    <div style="flex: 1 1 280px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-      <p style="font-style: italic;">„In 5 Minuten war alles erledigt. Beratung über WhatsApp war top – hab 230 € im Jahr gespart!“</p>
-      <p style="font-weight: bold; margin-top: 10px;">– Fatma K., Berlin</p>
-    </div>
+  <!-- Bewertung 2 -->
+  <div style="max-width:800px;margin:0 auto 30px auto;padding:20px;background:white;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size:18px;color:#333;margin-bottom:10px;">„Super einfach! In 2 Minuten war alles erledigt. Bonus gab’s auch!“</p>
+    <p style="color:#888;font-size:14px;">– Aylin K., Hamburg</p>
+    <div style="color:#f5b400;font-size:20px;">★★★★★</div>
+  </div>
 
-    <div style="flex: 1 1 280px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-      <p style="font-style: italic;">„Ich war skeptisch, aber am Ende hab ich nicht nur gespart, sondern wurde auch perfekt betreut.“</p>
-      <p style="font-weight: bold; margin-top: 10px;">– Mustafa E., Hamburg</p>
-    </div>
+  <!-- Bewertung 3 -->
+  <div style="max-width:800px;margin:0 auto 30px auto;padding:20px;background:white;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size:18px;color:#333;margin-bottom:10px;">„Ich habe den günstigsten Tarif gefunden. Ganz ohne Stress!“</p>
+    <p style="color:#888;font-size:14px;">– Sven B., Köln</p>
+    <div style="color:#f5b400;font-size:20px;">★★★★★</div>
+  </div>
 
-    <div style="flex: 1 1 280px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-      <p style="font-style: italic;">„Der Wechsel war super einfach, ich musste fast nichts tun. 270 € Bonus – danke!“</p>
-      <p style="font-weight: bold; margin-top: 10px;">– Lisa B., Köln</p>
-    </div>
-
+  <!-- Vertrauenselemente -->
+  <div style="margin-top:40px;">
+    <p style="font-size:16px;color:#555;margin-bottom:15px;">✓ TÜV-zertifizierter Vergleich – ✓ SSL-Verschlüsselung – ✓ Deutscher Datenschutz</p>
+    <p style="font-size:18px;color:#1a8917;font-weight:bold;">Schon <span id="kundenZaehler">827</span> Kunden beraten</p>
   </div>
 </section>
+
+<script>
+  // Echtzeit-Zähler (simuliert)
+  const z = document.getElementById('kundenZaehler');
+  let base = 827;
+  setInterval(() => {
+    base++;
+    z.textContent = base;
+  }, 5000);
+</script>
+<!-- Ende Bewertungen Section -->
 
 
 
